@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
-import {BrowserRouter, Route, Routes} from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Main } from './pages/main/main';
-import { Login } from './pages/login';
+import { Login } from './pages/login/login';
 import { Navbar } from './components/navbar';
 import { CreatePost } from './pages/create-post/create-post';
 

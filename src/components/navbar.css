@@ -77,4 +77,10 @@
         margin-left: auto; 
         gap: 20px;
     }
+    .name {
+        display: none;
+    }
+    .links {
+        font-size: 15px;
+    }
 }

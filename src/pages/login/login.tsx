@@ -1,7 +1,8 @@
-import { auth, provider } from "../config/firebase";
+import { auth, provider } from "../../config/firebase";
 import { signInWithPopup } from "firebase/auth"; // это один из методов чтобы зарегаться (их много, на вкус и цвет)
-import { useNavigate } from "react-router-dom";
 
+import { useNavigate } from "react-router-dom";
+import './login.css';
 
 export const Login = () => {
     const navigate = useNavigate();
@@ -9,12 +10,13 @@ export const Login = () => {
     const signInwithGoogle = async () => {    // эта функция сработает, когда мы нажмем на кнопку "зарегистрироваться"
         const result = await signInWithPopup(auth, provider);
         console.log(result);
-        navigate('/')
+        navigate('/');
     }
+
     return (
-        <div> 
-            <p> Sign in </p>
-            <button onClick={signInwithGoogle}> Sign in with Google </button>
+        <div className="login-container">
+            <p>Sign in to see all the posts </p>
+            <button onClick={signInwithGoogle}>Sign in with Google</button>
         </div>
     );
-}
+}       

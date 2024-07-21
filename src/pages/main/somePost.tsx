@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import './somePost.css';
 
+
 interface Props {
     postFromFirestore: Post;
 }
@@ -66,7 +67,6 @@ export const SomePost = (props: Props) => {
     return (
         <div className="post-container">
             <p className='author'> @{postFromFirestore.userName}</p>
-
             <div className="post-content">
                 <div> {postFromFirestore.description} </div>
             </div>
